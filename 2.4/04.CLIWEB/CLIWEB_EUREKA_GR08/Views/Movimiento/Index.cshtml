@@ -1,0 +1,108 @@
+@{
+    ViewBag.Title = "Movimientos - Eureka Bank";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var movimientos = ViewBag.Movimientos as List<CLIWEB_EUREKA_GR08.ec.edu.monster.model.MovimientoModel>;
+}
+
+<div class="card">
+    <h1 class="card-title">
+        <i class="fas fa-list-alt"></i>
+        Consultar Movimientos
+    </h1>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            <i class="fas fa-exclamation-circle"></i> @ViewBag.Error
+        </div>
+    }
+
+    @using (Html.BeginForm("Index", "Movimiento", FormMethod.Post, new { @class = "movimiento-form" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <label class="form-label" for="cuenta">
+                <i class="fas fa-credit-card"></i> Número de Cuenta
+            </label>
+            <input type="text" id="cuenta" name="cuenta" class="form-control" placeholder="Ingrese el número de cuenta" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fas fa-search"></i> Consultar Movimientos
+        </button>
+    }
+
+    @if (movimientos != null)
+    {
+        <div class="stats-grid" style="margin-top: 2rem;">
+            <div class="stat-card">
+                <h4>Saldo Actual</h4>
+                <div class="value">$@ViewBag.SaldoActual.ToString("N2")</div>
+            </div>
+            <div class="stat-card" style="background: #11998e;">
+                <h4>Total Ingresos</h4>
+                <div class="value">$@ViewBag.TotalIngresos.ToString("N2")</div>
+            </div>
+            <div class="stat-card" style="background: #f5576c;">
+                <h4>Total Egresos</h4>
+                <div class="value">$@ViewBag.TotalEgresos.ToString("N2")</div>
+            </div>
+            <div class="stat-card" style="background: #4facfe;">
+                <h4>Saldo Neto</h4>
+                <div class="value">$@ViewBag.SaldoNeto.ToString("N2")</div>
+            </div>
+        </div>
+
+        if (movimientos.Count > 0)
+        {
+            <div class="card" style="margin-top: 2rem; overflow-x: auto;">
+                <h2 style="margin-bottom: 1.5rem;">
+                    <i class="fas fa-history"></i> Historial de Movimientos
+                </h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Fecha</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Importe</th>
+                            <th>Saldo</th>
+                            <th>Cuenta Referencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var mov in movimientos)
+                        {
+                            <tr>
+                                <td>@mov.NumeroMovimiento</td>
+                                <td>@(mov.FechaMovimiento ?? "N/A")</td>
+                                <td>@(mov.CodigoTipoMovimiento ?? "N/A")</td>
+                                <td>@(mov.TipoDescripcion ?? "N/A")</td>
+                                <td style="font-weight: 600; color: @(mov.ImporteMovimiento >= 0 ? "#11998e" : "#f5576c");">
+                                    $@mov.ImporteMovimiento.ToString("N2")
+                                </td>
+                                <td>$@mov.Saldo.ToString("N2")</td>
+                                <td>@(mov.CuentaReferencia ?? "-")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <div class="alert" style="background: #fff3cd; color: #856404; border-left: 4px solid #ffc107; margin-top: 2rem;">
+                <i class="fas fa-info-circle"></i> No se encontraron movimientos para esta cuenta.
+            </div>
+        }
+    }
+
+    <div style="margin-top: 2rem; text-align: center;">
+        <a href="@Url.Action("Index", "Home")" class="btn" style="background: #f0f0f0; color: #333;">
+            <i class="fas fa-arrow-left"></i> Volver al Menú
+        </a>
+    </div>
+</div>
+

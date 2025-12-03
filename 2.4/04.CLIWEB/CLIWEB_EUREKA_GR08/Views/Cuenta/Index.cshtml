@@ -1,0 +1,86 @@
+@{
+    ViewBag.Title = "Datos de Cuenta - Eureka Bank";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var cuenta = ViewBag.Cuenta as CLIWEB_EUREKA_GR08.ec.edu.monster.model.CuentaModel;
+}
+
+<div class="card">
+    <h1 class="card-title">
+        <i class="fas fa-info-circle"></i>
+        Consultar Datos de Cuenta
+    </h1>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            <i class="fas fa-exclamation-circle"></i> @ViewBag.Error
+        </div>
+    }
+
+    @using (Html.BeginForm("Index", "Cuenta", FormMethod.Post, new { @class = "cuenta-form" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <label class="form-label" for="cuenta">
+                <i class="fas fa-credit-card"></i> Número de Cuenta
+            </label>
+            <input type="text" id="cuenta" name="cuenta" class="form-control" placeholder="Ingrese el número de cuenta" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fas fa-search"></i> Consultar
+        </button>
+    }
+
+    @if (cuenta != null)
+    {
+        <div class="card" style="margin-top: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+            <h2 style="color: white; margin-bottom: 1.5rem;">
+                <i class="fas fa-credit-card"></i> Información de la Cuenta
+            </h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div>
+                    <strong><i class="fas fa-hashtag"></i> Código de Cuenta:</strong>
+                    <p style="margin-top: 0.5rem; font-size: 1.1rem;">@cuenta.ChrCuenCodigo</p>
+                </div>
+                <div>
+                    <strong><i class="fas fa-dollar-sign"></i> Saldo:</strong>
+                    <p style="margin-top: 0.5rem; font-size: 1.5rem; font-weight: 700;">$@cuenta.DecCuenSaldo.ToString("N2")</p>
+                </div>
+                <div>
+                    <strong><i class="fas fa-list-ol"></i> Contador de Movimientos:</strong>
+                    <p style="margin-top: 0.5rem; font-size: 1.1rem;">@cuenta.IntCuenContMov</p>
+                </div>
+                <div>
+                    <strong><i class="fas fa-calendar"></i> Fecha de Creación:</strong>
+                    <p style="margin-top: 0.5rem; font-size: 1.1rem;">
+                        @if (cuenta.DttCuenFechaCreacion.HasValue)
+                        {
+                            @cuenta.DttCuenFechaCreacion.Value.ToString("dd/MM/yyyy")
+                        }
+                        else
+                        {
+                            <text>N/A</text>
+                        }
+                    </p>
+                </div>
+                <div>
+                    <strong><i class="fas fa-info-circle"></i> Estado:</strong>
+                    <p style="margin-top: 0.5rem; font-size: 1.1rem;">@cuenta.VchCuenEstado</p>
+                </div>
+                <div>
+                    <strong><i class="fas fa-building"></i> Sucursal:</strong>
+                    <p style="margin-top: 0.5rem; font-size: 1.1rem;">@cuenta.ChrSucucodigo</p>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div style="margin-top: 2rem; text-align: center;">
+        <a href="@Url.Action("Index", "Home")" class="btn" style="background: #f0f0f0; color: #333;">
+            <i class="fas fa-arrow-left"></i> Volver al Menú
+        </a>
+    </div>
+</div>
+

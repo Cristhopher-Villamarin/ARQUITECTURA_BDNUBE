@@ -1,0 +1,62 @@
+@{
+    ViewBag.Title = "Transferencia - Eureka Bank";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <h1 class="card-title">
+        <i class="fas fa-exchange-alt"></i>
+        Realizar Transferencia
+    </h1>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            <i class="fas fa-exclamation-circle"></i> @ViewBag.Error
+        </div>
+    }
+
+    @if (ViewBag.Success != null)
+    {
+        <div class="alert alert-success">
+            <i class="fas fa-check-circle"></i> @ViewBag.Success
+        </div>
+    }
+
+    @using (Html.BeginForm("Index", "Transferencia", FormMethod.Post, new { @class = "transferencia-form" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <label class="form-label" for="cuentaOrigen">
+                <i class="fas fa-credit-card"></i> Cuenta Origen
+            </label>
+            <input type="text" id="cuentaOrigen" name="cuentaOrigen" class="form-control" placeholder="Ingrese el número de cuenta origen" required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="cuentaDestino">
+                <i class="fas fa-credit-card"></i> Cuenta Destino
+            </label>
+            <input type="text" id="cuentaDestino" name="cuentaDestino" class="form-control" placeholder="Ingrese el número de cuenta destino" required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="monto">
+                <i class="fas fa-dollar-sign"></i> Monto
+            </label>
+            <input type="number" id="monto" name="monto" class="form-control" placeholder="Ingrese el monto a transferir" step="0.01" min="0.01" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fas fa-check"></i> Realizar Transferencia
+        </button>
+    }
+
+    <div style="margin-top: 2rem; text-align: center;">
+        <a href="@Url.Action("Index", "Home")" class="btn" style="background: #f0f0f0; color: #333;">
+            <i class="fas fa-arrow-left"></i> Volver al Menú
+        </a>
+    </div>
+</div>
+

@@ -1,0 +1,157 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1D593817-DF92-4CDB-8353-3A2752EAC1CA}|ws_eureka_bank_restful_dotnet.csproj|c:\\users\\crist\\onedrive\\documentos\\arquitectura\\arquitecturaparcial1bbd-main\\tl2.4 restfull_dotnet_eureka_bank_gr08\\01.servidor\\ws_eureka_bank_restful_dotnet\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1D593817-DF92-4CDB-8353-3A2752EAC1CA}|ws_eureka_bank_restful_dotnet.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D593817-DF92-4CDB-8353-3A2752EAC1CA}|ws_eureka_bank_restful_dotnet.csproj|c:\\users\\crist\\onedrive\\documentos\\arquitectura\\arquitecturaparcial1bbd-main\\tl2.4 restfull_dotnet_eureka_bank_gr08\\01.servidor\\ws_eureka_bank_restful_dotnet\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1D593817-DF92-4CDB-8353-3A2752EAC1CA}|ws_eureka_bank_restful_dotnet.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D593817-DF92-4CDB-8353-3A2752EAC1CA}|ws_eureka_bank_restful_dotnet.csproj|c:\\users\\crist\\onedrive\\documentos\\arquitectura\\arquitecturaparcial1bbd-main\\tl2.4 restfull_dotnet_eureka_bank_gr08\\01.servidor\\ws_eureka_bank_restful_dotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D593817-DF92-4CDB-8353-3A2752EAC1CA}|ws_eureka_bank_restful_dotnet.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D593817-DF92-4CDB-8353-3A2752EAC1CA}|ws_eureka_bank_restful_dotnet.csproj|c:\\users\\crist\\onedrive\\documentos\\arquitectura\\arquitecturaparcial1bbd-main\\tl2.4 restfull_dotnet_eureka_bank_gr08\\01.servidor\\ws_eureka_bank_restful_dotnet\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1D593817-DF92-4CDB-8353-3A2752EAC1CA}|ws_eureka_bank_restful_dotnet.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D593817-DF92-4CDB-8353-3A2752EAC1CA}|ws_eureka_bank_restful_dotnet.csproj|c:\\users\\crist\\onedrive\\documentos\\arquitectura\\arquitecturaparcial1bbd-main\\tl2.4 restfull_dotnet_eureka_bank_gr08\\01.servidor\\ws_eureka_bank_restful_dotnet\\ws_eureka_bank_restful_dotnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1D593817-DF92-4CDB-8353-3A2752EAC1CA}|ws_eureka_bank_restful_dotnet.csproj|solutionrelative:ws_eureka_bank_restful_dotnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D593817-DF92-4CDB-8353-3A2752EAC1CA}|ws_eureka_bank_restful_dotnet.csproj|c:\\users\\crist\\onedrive\\documentos\\arquitectura\\arquitecturaparcial1bbd-main\\tl2.4 restfull_dotnet_eureka_bank_gr08\\01.servidor\\ws_eureka_bank_restful_dotnet\\ec.edu.monster.db\\accesobd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D593817-DF92-4CDB-8353-3A2752EAC1CA}|ws_eureka_bank_restful_dotnet.csproj|solutionrelative:ec.edu.monster.db\\accesobd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D593817-DF92-4CDB-8353-3A2752EAC1CA}|ws_eureka_bank_restful_dotnet.csproj|c:\\users\\crist\\onedrive\\documentos\\arquitectura\\arquitecturaparcial1bbd-main\\tl2.4 restfull_dotnet_eureka_bank_gr08\\01.servidor\\ws_eureka_bank_restful_dotnet\\ws_eureka_bank_restful_dotnet.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{1D593817-DF92-4CDB-8353-3A2752EAC1CA}|ws_eureka_bank_restful_dotnet.csproj|solutionrelative:ws_eureka_bank_restful_dotnet.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a83394e3-39c2-4678-a3c8-364b69d78fd3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-10T17:17:51.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-07T17:54:09.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ws_eureka_bank_restful_dotnet.csproj",
+              "DocumentMoniker": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\ws_eureka_bank_restful_dotnet.csproj",
+              "RelativeDocumentMoniker": "ws_eureka_bank_restful_dotnet.csproj",
+              "ToolTip": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\ws_eureka_bank_restful_dotnet.csproj",
+              "RelativeToolTip": "ws_eureka_bank_restful_dotnet.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-07T17:53:48.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccesoBD.cs",
+              "DocumentMoniker": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\ec.edu.monster.db\\AccesoBD.cs",
+              "RelativeDocumentMoniker": "ec.edu.monster.db\\AccesoBD.cs",
+              "ToolTip": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\ec.edu.monster.db\\AccesoBD.cs",
+              "RelativeToolTip": "ec.edu.monster.db\\AccesoBD.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T17:48:56.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-07T17:40:33.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T17:38:46.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ws_eureka_bank_restful_dotnet.http",
+              "DocumentMoniker": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\ws_eureka_bank_restful_dotnet.http",
+              "RelativeDocumentMoniker": "ws_eureka_bank_restful_dotnet.http",
+              "ToolTip": "C:\\Users\\crist\\OneDrive\\Documentos\\ARQUITECTURA\\ArquitecturaParcial1BBD-main\\Tl2.4 RESTFULL_DOTNET_EUREKA_BANK_GR08\\01.SERVIDOR\\ws_eureka_bank_restful_dotnet\\ws_eureka_bank_restful_dotnet.http",
+              "RelativeToolTip": "ws_eureka_bank_restful_dotnet.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-11-07T17:40:14.703Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

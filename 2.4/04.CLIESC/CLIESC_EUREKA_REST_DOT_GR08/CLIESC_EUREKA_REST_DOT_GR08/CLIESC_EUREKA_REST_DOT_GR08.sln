@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLIESC_EUREKA_REST_DOT_GR08", "CLIESC_EUREKA_REST_DOT_GR08.csproj", "{09AD9E85-F776-0EC2-72B6-262D872B7AC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09AD9E85-F776-0EC2-72B6-262D872B7AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09AD9E85-F776-0EC2-72B6-262D872B7AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09AD9E85-F776-0EC2-72B6-262D872B7AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09AD9E85-F776-0EC2-72B6-262D872B7AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61F1E7FA-1596-484D-9EEE-0105FB54929B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,51 @@
+@{
+    ViewBag.Title = "Menú Principal - Eureka Bank";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <h1 class="card-title">
+        <i class="fas fa-home"></i>
+        Bienvenido, @ViewBag.Username
+    </h1>
+    <p style="color: #666; margin-bottom: 2rem; font-size: 1.1rem;">
+        Seleccione una opción del menú para continuar
+    </p>
+
+    <div class="menu-grid">
+        <a href="@Url.Action("Index", "Deposito")" class="menu-card">
+            <i class="fas fa-arrow-down"></i>
+            <h3>Depósito</h3>
+            <p>Realizar un depósito a una cuenta</p>
+        </a>
+
+        <a href="@Url.Action("Index", "Retiro")" class="menu-card">
+            <i class="fas fa-arrow-up"></i>
+            <h3>Retiro</h3>
+            <p>Realizar un retiro de una cuenta</p>
+        </a>
+
+        <a href="@Url.Action("Index", "Transferencia")" class="menu-card">
+            <i class="fas fa-exchange-alt"></i>
+            <h3>Transferencia</h3>
+            <p>Transferir dinero entre cuentas</p>
+        </a>
+
+        <a href="@Url.Action("Index", "Cuenta")" class="menu-card">
+            <i class="fas fa-info-circle"></i>
+            <h3>Datos de Cuenta</h3>
+            <p>Consultar información de una cuenta</p>
+        </a>
+
+        <a href="@Url.Action("Index", "Movimiento")" class="menu-card">
+            <i class="fas fa-list-alt"></i>
+            <h3>Movimientos</h3>
+            <p>Ver historial de movimientos</p>
+        </a>
+    </div>
+</div>
+
+<div style="text-align: center; margin-top: 2rem;">
+    <img src="@Url.Content("~/imgs/mikeysullivan.png")" alt="Mike y Sullivan" class="mikeysullivan-image" />
+</div>
+

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores personalizados de Eureka Bank -->
+    <color name="primary_green">#329164</color>
+    <color name="primary_green_light">#6f95c4</color>
+    <color name="accent_green">#7bb43c</color>
+    <color name="accent_green_dark">#3c6098</color>
+    <color name="dark_green">#2b6324</color>
+    <color name="light_green">#8bc6a1</color>
+    <color name="bright_green">#c3e05b</color>
+    <color name="purple">#8a86a3</color>
+    <color name="navy_blue">#215e84</color>
+    <color name="charcoal">#070808</color>
+    <color name="violet">#6c5494</color>
+    <color name="teal">#0b3f3d</color>
+    <color name="lime">#6da440</color>
+    <color name="sky_blue">#b2c7db</color>
+    <color name="cyan">#91c6e1</color>
+    <color name="sage">#bbc6a6</color>
+    <color name="blue">#05abda</color>
+    <color name="midnight">#142351</color>
+    <color name="deep_blue">#104367</color>
+    <color name="lavender">#ada4bc</color>
+    <color name="dark_gray">#363f4b</color>
+    <color name="sea_green">#055b4b</color>
+    <color name="teal_dark">#0e6764</color>
+    <color name="mint">#dde7ce</color>
+    <color name="light_cyan">#d5e7eb</color>
+    <color name="ocean">#538dad</color>
+    <color name="forest">#0f3d2a</color>
+    <color name="light_gray">#cccad2</color>
+    <color name="grass">#8aba5b</color>
+    <color name="off_white">#fcfbfb</color>
+    <color name="orchid">#947cbc</color>
+    <color name="pale_green">#ebefe2</color>
+    <color name="ice">#f4f9f8</color>
+    <color name="turquoise">#44b4cc</color>
+    <color name="cloud">#ecf5f5</color>
+    <color name="olive">#34542c</color>
+    <color name="baby_blue">#e4f5f8</color>
+    <color name="lilac">#e4dcee</color>
+    <color name="ivory">#f8fbec</color>
+
+    <!-- Colores para la UI - Estandarizados con cliente web -->
+    <color name="primary">#667eea</color>
+    <color name="primary_dark">#764ba2</color>
+    <color name="primary_light">#667eea</color>
+    <color name="accent">#764ba2</color>
+    <color name="background">#764ba2</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#555555</color>
+    <color name="input_text">#000000</color>
+    <color name="error">#c33</color>
+    <color name="success">#3c3</color>
+    
+    <!-- Colores para gradientes -->
+    <color name="gradient_start">#667eea</color>
+    <color name="gradient_end">#764ba2</color>
+    <color name="logout_gradient_start">#f093fb</color>
+    <color name="logout_gradient_end">#f5576c</color>
+    
+    <!-- Colores adicionales del diseño web -->
+    <color name="input_border">#e0e0e0</color>
+    <color name="input_focus">#667eea</color>
+    <color name="input_hint">#212121</color>
+    <color name="input_hint_dark">#000000</color>
+    <color name="alert_danger_bg">#fee</color>
+    <color name="alert_success_bg">#efe</color>
+</resources>

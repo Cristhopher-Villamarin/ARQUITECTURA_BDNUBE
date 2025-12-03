@@ -1,0 +1,98 @@
+[
+  {
+    "ContainingType": "ws_eureka_bank_restful_dotnet.Controllers.CuentaController",
+    "Method": "ObtenerCuenta",
+    "RelativePath": "api/Cuenta/{codigoCuenta}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoCuenta",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ws_eureka_bank_restful_dotnet.Controllers.CuentaController",
+    "Method": "Deposito",
+    "RelativePath": "api/Cuenta/deposito",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ec.edu.monster.model.DepositoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ws_eureka_bank_restful_dotnet.Controllers.CuentaController",
+    "Method": "Retiro",
+    "RelativePath": "api/Cuenta/retiro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ec.edu.monster.model.RetiroRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ws_eureka_bank_restful_dotnet.Controllers.CuentaController",
+    "Method": "Transferencia",
+    "RelativePath": "api/Cuenta/transferencia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ec.edu.monster.model.TransferenciaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ws_eureka_bank_restful_dotnet.Controllers.LoginController",
+    "Method": "Authenticate",
+    "RelativePath": "api/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ec.edu.monster.model.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ws_eureka_bank_restful_dotnet.Controllers.MovimientoController",
+    "Method": "GetMovimientos",
+    "RelativePath": "api/Movimiento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ec.edu.monster.model.MovimientoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
