@@ -10,8 +10,10 @@ namespace CLIWEB_EUREKA_GR08.ec.edu.monster.controller
     public class MovimientoController : Controller
     {
         // Códigos de tipo de movimiento
-        private static readonly HashSet<string> COD_EGRESO = new HashSet<string> { "004" }; // Retiro
-        private static readonly HashSet<string> COD_INGRESO = new HashSet<string> { "001", "003", "009" }; // Apertura, Depósito, Transferencia
+        // Egreso: Retiro (004), Transferencia Origen (009)
+        private static readonly HashSet<string> COD_EGRESO = new HashSet<string> { "004", "009" };
+        // Ingreso: Apertura (001), Depósito (003), Transferencia Destino (008)
+        private static readonly HashSet<string> COD_INGRESO = new HashSet<string> { "001", "003", "008" };
 
         // GET: Movimiento
         public ActionResult Index()
@@ -67,12 +69,26 @@ namespace CLIWEB_EUREKA_GR08.ec.edu.monster.controller
                     string codigo = mov.CodigoTipoMovimiento ?? "";
                     string descripcion = (mov.TipoDescripcion ?? "").ToLower().Trim();
 
+                    // Ajustar descripción para transferencias según el código de movimiento
+                    // 009: Transferencia (Cuenta Origen) -> Débito
+                    // 008: Transferencia (Cuenta Destino) -> Crédito
+                    if (codigo == "009")
+                    {
+                        mov.TipoDescripcion = "Transferencia - Débito";
+                        descripcion = mov.TipoDescripcion.ToLower().Trim();
+                    }
+                    else if (codigo == "008")
+                    {
+                        mov.TipoDescripcion = "Transferencia - Crédito";
+                        descripcion = mov.TipoDescripcion.ToLower().Trim();
+                    }
+
                     if (COD_EGRESO.Contains(codigo) || descripcion == "retiro")
                     {
                         totalEgresos += importe;
                     }
                     else if (COD_INGRESO.Contains(codigo) || descripcion == "deposito" || descripcion == "depósito"
-                             || descripcion == "transferencia" || descripcion == "apertura de cuenta")
+                             || descripcion == "apertura de cuenta")
                     {
                         totalIngresos += importe;
                     }
