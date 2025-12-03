@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado normal - hint dentro del campo -->
+    <item android:state_enabled="true" android:color="#FF000000" android:alpha="1.0"/>
+    <!-- Estado cuando el campo está enfocado -->
+    <item android:state_focused="true" android:color="#FF212121" android:alpha="1.0"/>
+    <!-- Estado cuando el campo está deshabilitado -->
+    <item android:color="#FF212121" android:alpha="1.0"/>
+</selector>
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Bienvenido - EurekaBank</title>
+    <style>
+        body.welcome-body {
+            background-image: url('/images/fondowelcome.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .welcome-wrapper { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; }
+        .welcome-card { background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 20px 40px rgba(0,0,0,.1); max-width: 800px; width: 92%; }
+        .welcome-header { text-align: center; margin-bottom: 1.5rem; }
+        .welcome-title { font-size: 2rem; font-weight: 700; color: #111827; }
+        .welcome-sub { color: #4b5563; margin-top: .35rem; }
+        .welcome-actions { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; margin-top: 1.5rem; }
+        .action { border: 2px solid #e5e7eb; border-radius: 14px; padding: 1.25rem; transition: all .2s ease; display: flex; flex-direction: column; gap: .5rem; }
+        .action:hover { border-color: #667eea; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(102,126,234,.2); }
+        .action-title { font-weight: 700; color: #111827; font-size: 1.1rem; }
+        .action-desc { color: #6b7280; font-size: .95rem; }
+        .action button { margin-top: .5rem; align-self: flex-start; background: linear-gradient(135deg,#667eea 0%,#764ba2 100%); color: #fff; border: 0; padding: .65rem 1rem; border-radius: 10px; font-weight: 600; cursor: pointer; }
+        @media (max-width: 720px) { .welcome-actions { grid-template-columns: 1fr; } .welcome-title { font-size: 1.6rem; } }
+    </style>
+    <script>
+        function goToAccount() { window.location.href = '/account'; }
+        function goToMovements() { window.location.href = '/movements'; }
+    </script>
+    
+</head>
+
+<body class="login-body welcome-body">
+    <button class="floating-back-button" onclick="window.location.href='/login'" title="Regresar al Login">&#8592;</button>
+    <div class="welcome-wrapper">
+        <div class="welcome-card">
+            <div class="welcome-header">
+                <div class="welcome-title">Bienvenido a EUREKABANK</div>
+                <div class="welcome-sub">Selecciona lo que deseas hacer</div>
+            </div>
+            <div class="welcome-actions">
+                <div class="action">
+                    <div class="action-title">Gestionar Operaciones</div>
+                    <div class="action-desc">Depositar, retirar o transferir entre cuentas.</div>
+                    <button onclick="goToAccount()">Ir a gestionar operaciones</button>
+                </div>
+                <div class="action">
+                    <div class="action-title">Movimientos</div>
+                    <div class="action-desc">Consulta movimientos y resumen de una cuenta.</div>
+                    <button onclick="goToMovements()">Ver movimientos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+

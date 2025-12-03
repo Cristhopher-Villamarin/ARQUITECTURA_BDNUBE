@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Eureka Bank</string>
+    <string name="login_title">Iniciar Sesión</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="username">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login_button">INGRESAR</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="deposito">Depósito</string>
+    <string name="retiro">Retiro</string>
+    <string name="transferencia">Transferencia</string>
+    <string name="movimientos">Movimientos</string>
+    <string name="datos_cuenta">Datos de Cuenta</string>
+    <string name="consultar">Consultar</string>
+    <string name="realizar">Realizar</string>
+</resources>
