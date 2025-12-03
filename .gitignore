@@ -1,42 +1,44 @@
-# ──────────────────────────────
-# Carpetas de compilación .NET
-# ──────────────────────────────
+# =======================
+# .NET / Visual Studio
+# =======================
 bin/
 obj/
 [Bb]in/
 [Oo]bj/
 
-# Archivos generados por Visual Studio
+# Archivos generados
+*.exe
+*.dll
+*.pdb
+*.cache
+*.g.cache
+*.FileListAbsolute.txt
+*.generated.cs
+
+# NuGet
+packages/
+*.nuget
+*.nupkg
+
+# Visual Studio cachés y configuración local
+.vs/
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
 *.csproj.user
 
-# Cachés de NuGet y paquetes
-*.nuget
-*.nupkg
-packages/
-*.cache
-*.g.cache
-*.FileListAbsolute.txt
-*.generated.cs
-
-# Archivos de depuración y ejecutables
-*.pdb
-*.exe
-*.dll
-*.exe.config
-*.dll.config
-
-# Carpeta .vs (configuración local de VS)
-.vs/
-
-# Logs y resultados de pruebas
+# Logs y temporales
+*.log
 [Tt]est[Rr]esult*/
 [Bb]uild/
-*.log
 
-# OneDrive / sincronización en la nube (muy importante en tu caso)
+# OneDrive / carpetas temporales de sincronización (muy importante en tu caso)
 *.tmp
 ~*$
+Thumbs.db
+Desktop.ini
+
+# Ignorar todo dentro de cualquier bin y obj aunque ya estén en el repo
+**/bin/
+**/obj/
