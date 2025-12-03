@@ -42,3 +42,11 @@ Desktop.ini
 # Ignorar todo dentro de cualquier bin y obj aunque ya estén en el repo
 **/bin/
 **/obj/
+
+# Configuración personal de Visual Studio (nunca versionar)
+*.suo
+*.user
+*.userosscache
+DocumentLayout.json
+DocumentLayout.backup.json
+*.rsuser
