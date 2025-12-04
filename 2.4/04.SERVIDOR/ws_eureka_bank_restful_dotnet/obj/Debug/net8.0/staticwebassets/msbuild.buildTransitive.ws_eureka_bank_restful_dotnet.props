@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\ws_eureka_bank_restful_dotnet.props" />
-</Project>

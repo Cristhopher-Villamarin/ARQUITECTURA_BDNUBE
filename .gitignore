@@ -1,0 +1,52 @@
+# =======================
+# .NET / Visual Studio
+# =======================
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# Archivos generados
+*.exe
+*.dll
+*.pdb
+*.cache
+*.g.cache
+*.FileListAbsolute.txt
+*.generated.cs
+
+# NuGet
+packages/
+*.nuget
+*.nupkg
+
+# Visual Studio cachés y configuración local
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.csproj.user
+
+# Logs y temporales
+*.log
+[Tt]est[Rr]esult*/
+[Bb]uild/
+
+# OneDrive / carpetas temporales de sincronización (muy importante en tu caso)
+*.tmp
+~*$
+Thumbs.db
+Desktop.ini
+
+# Ignorar todo dentro de cualquier bin y obj aunque ya estén en el repo
+**/bin/
+**/obj/
+
+# Configuración personal de Visual Studio (nunca versionar)
+*.suo
+*.user
+*.userosscache
+DocumentLayout.json
+DocumentLayout.backup.json
+*.rsuser

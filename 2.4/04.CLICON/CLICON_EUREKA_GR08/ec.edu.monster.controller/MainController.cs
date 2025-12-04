@@ -206,6 +206,18 @@ namespace CLICON_EUREKA_GR08.ec.edu.monster.controller
                     string cuentaRef = mov.CuentaReferencia ?? "N/A";
                     string tipoDesc = mov.TipoDescripcion ?? "N/A";
 
+                    // Ajustar descripción de transferencias según el código de movimiento
+                    // 009: Transferencia (Cuenta Origen) -> Débito
+                    // 008: Transferencia (Cuenta Destino) -> Crédito
+                    if (mov.CodigoTipoMovimiento == "009")
+                    {
+                        tipoDesc = "Transferencia - Débito";
+                    }
+                    else if (mov.CodigoTipoMovimiento == "008")
+                    {
+                        tipoDesc = "Transferencia - Crédito";
+                    }
+
                     resultado.AppendFormat("{0,-10} {1,-20} {2,-12} {3,-20} {4,-15:F2} {5,-15} {6,-15:F2}",
                         mov.NumeroMovimiento,
                         fecha,

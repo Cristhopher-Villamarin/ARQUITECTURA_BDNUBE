@@ -145,22 +145,22 @@ namespace CLIESC_EUREKA_REST_DOT_GR08.ec.edu.monster.controller
             string desc = mov.TipoDescripcion?.Trim() ?? "";
             string descUp = desc.ToUpperInvariant();
 
-            // 1) Si hay código, mandan los mismos que en SOAP:
+            // 1) Si hay código, usamos los códigos del backend REST actual:
             // 001: Apertura (Crédito inicial)
             // 003: Depósito (Crédito)
             // 004: Retiro (Débito)
-            // 008: Transferencia enviada (Débito)
-            // 009: Transferencia recibida (Crédito)
+            // 008: Transferencia destino / recibida (Crédito)
+            // 009: Transferencia origen / enviada (Débito)
             if (!string.IsNullOrEmpty(cod))
             {
                 switch (cod)
                 {
                     case "001":
                     case "003":
-                    case "009":
+                    case "008":
                         return "Crédito";
                     case "004":
-                    case "008":
+                    case "009":
                         return "Débito";
                 }
             }
