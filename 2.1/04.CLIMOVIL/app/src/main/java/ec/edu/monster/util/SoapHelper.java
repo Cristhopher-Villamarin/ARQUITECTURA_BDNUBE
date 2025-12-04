@@ -12,7 +12,7 @@ import java.io.IOException;
 public class SoapHelper {
 
     private static final String NAMESPACE = "http://ws.monster.edu.ec/";
-    private static final String BASE_URL = "http://192.168.18.231:8080/ws_eureka_bank_soap_java/";
+    private static final String BASE_URL = "http://10.0.2.2:8080/ws_eureka_bank_soap_java/";
 
     private static final OkHttpClient client = new OkHttpClient();
     private static final MediaType XML = MediaType.parse("text/xml; charset=utf-8");

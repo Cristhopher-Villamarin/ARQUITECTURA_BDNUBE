@@ -23,8 +23,9 @@ public class MovimientoController {
     /**
      * Método para cargar y mostrar los movimientos en la vista proporcionada.
      *
-     * @param cuenta          Número de cuenta a buscar.
-     * @param movimientoView  Instancia de la vista donde se mostrarán los resultados.
+     * @param cuenta         Número de cuenta a buscar.
+     * @param movimientoView Instancia de la vista donde se mostrarán los
+     *                       resultados.
      */
     public void cargarMovimientos(String cuenta, MovimientoView movimientoView) {
         try {
@@ -45,6 +46,16 @@ public class MovimientoController {
                 // Crear celdas para cada movimiento
                 for (MovimientoModel mov : movimientos) {
 
+                    // Determinar descripción basada en el código de tipo de movimiento
+                    String descripcion = mov.getTipoDescripcion();
+                    String codigoTipo = mov.getCodigoTipoMovimiento();
+
+                    if ("009".equals(codigoTipo)) {
+                        descripcion = "Transferencia - Débito";
+                    } else if ("008".equals(codigoTipo)) {
+                        descripcion = "Transferencia - Crédito";
+                    }
+
                     String saldoTexto;
                     if (mov.getSaldo() != 0) {
                         // Asumimos que el backend ya envía el saldo acumulativo en cada movimiento
@@ -58,11 +69,10 @@ public class MovimientoController {
                             "Cuenta: " + mov.getCodigoCuenta(),
                             "Fecha: " + mov.getFechaMovimiento(),
                             "Movimiento: " + mov.getNumeroMovimiento(),
-                            "Descripción: " + mov.getTipoDescripcion(),
+                            "Descripción: " + descripcion,
                             "Tipo Mov.: " + mov.getCodigoTipoMovimiento(),
                             "Importe: $" + String.format("%.2f", mov.getImporteMovimiento()),
-                            saldoTexto
-                    );
+                            saldoTexto);
                     panelResultados.add(celda);
                 }
                 // Resumen de totales
@@ -79,30 +89,33 @@ public class MovimientoController {
                 JPanel resumenPanel = new JPanel(new GridLayout(3, 2, 10, 5));
                 resumenPanel.setBackground(new Color(248, 248, 255));
                 resumenPanel.setBorder(BorderFactory.createCompoundBorder(
-                    BorderFactory.createLineBorder(new Color(0x76, 0x4b, 0xa2), 2, true),
-                    BorderFactory.createEmptyBorder(10, 10, 10, 10)
-                ));
-           
-                JLabel saldoCuentaLabel = new JLabel("Saldo de la Cuenta: $" + (cuentaModel != null ? String.format("%.2f", cuentaModel.getDecCuenSaldo()) : "N/A"));
+                        BorderFactory.createLineBorder(new Color(0x76, 0x4b, 0xa2), 2, true),
+                        BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+
+                JLabel saldoCuentaLabel = new JLabel("Saldo de la Cuenta: $"
+                        + (cuentaModel != null ? String.format("%.2f", cuentaModel.getDecCuenSaldo()) : "N/A"));
                 saldoCuentaLabel.setFont(new Font("Segoe UI", Font.BOLD, 14));
                 saldoCuentaLabel.setForeground(new Color(40, 40, 40));
-                
-                JLabel totalMovimientosLabel = new JLabel("Total Movimientos: " + (cuentaModel != null ? cuentaModel.getIntCuenContMov() : "N/A"));
+
+                JLabel totalMovimientosLabel = new JLabel(
+                        "Total Movimientos: " + (cuentaModel != null ? cuentaModel.getIntCuenContMov() : "N/A"));
                 totalMovimientosLabel.setFont(new Font("Segoe UI", Font.BOLD, 14));
                 totalMovimientosLabel.setForeground(new Color(40, 40, 40));
-                
+
                 JLabel totalIngresosLabel = new JLabel("Total Ingresos: $" + String.format("%.2f", totalIngresos));
                 totalIngresosLabel.setFont(new Font("Segoe UI", Font.PLAIN, 13));
                 totalIngresosLabel.setForeground(new Color(0, 140, 70));
-                
-                JLabel totalEgresosLabel = new JLabel("Total Egresos: $" + String.format("%.2f", Math.abs(totalEgresos)));
+
+                JLabel totalEgresosLabel = new JLabel(
+                        "Total Egresos: $" + String.format("%.2f", Math.abs(totalEgresos)));
                 totalEgresosLabel.setFont(new Font("Segoe UI", Font.PLAIN, 13));
                 totalEgresosLabel.setForeground(new Color(180, 40, 40));
-                
-                JLabel saldoNetoLabel = new JLabel("Saldo Neto: $" + String.format("%.2f", totalIngresos + totalEgresos));
+
+                JLabel saldoNetoLabel = new JLabel(
+                        "Saldo Neto: $" + String.format("%.2f", totalIngresos + totalEgresos));
                 saldoNetoLabel.setFont(new Font("Segoe UI", Font.BOLD, 13));
                 saldoNetoLabel.setForeground(new Color(0x76, 0x4b, 0xa2));
-                
+
                 JLabel espacio = new JLabel("");
 
                 resumenPanel.add(saldoCuentaLabel);
@@ -126,4 +139,3 @@ public class MovimientoController {
         }
     }
 }
-

@@ -46,11 +46,9 @@ public class MainController {
     }
 
     public boolean realizarTransferencia(String cuentaOrigen, String cuentaDestino, String monto) {
-        boolean retiroExitoso = realizarRetiro(cuentaOrigen, monto);
-        if (retiroExitoso) {
-            return realizarDeposito(cuentaDestino, monto, "TRA", cuentaOrigen);
-        }
-        return false;
+        // La transferencia se maneja de forma atómica en el servidor con el tipo "TRA"
+        // Se pasa la cuenta origen, el monto, el tipo "TRA" y la cuenta destino
+        return realizarDeposito(cuentaOrigen, monto, "TRA", cuentaDestino);
     }
 
     public String verMovimientos(String cuenta) {
@@ -61,7 +59,7 @@ public class MainController {
             StringBuilder resultado = new StringBuilder();
             if (movimientos == null || movimientos.isEmpty()) {
                 resultado.append("No se encontraron movimientos para la cuenta: ").append(cuenta).append("\n");
-                
+
                 return encloseInBox("MOVIMIENTOS DE LA CUENTA " + cuenta, resultado.toString());
             }
 
@@ -73,14 +71,25 @@ public class MainController {
 
             resultado.append(String.format("%-10s %-20s %-12s %-20s %-15s %-15s %-15s%n",
                     "Nro", "Fecha", "Tipo Mov.", "Descripción", "Importe", "Cta Ref.", "Saldo"));
-            resultado.append("----------------------------------------------------------------------------------------------------\n");
+            resultado.append(
+                    "----------------------------------------------------------------------------------------------------\n");
 
             for (MovimientoModel mov : movimientos) {
+                // Determinar descripción basada en el código de tipo de movimiento
+                String descripcion = mov.getTipoDescripcion();
+                String codigoTipo = mov.getCodigoTipoMovimiento();
+
+                if ("009".equals(codigoTipo)) {
+                    descripcion = "Transferencia - Débito";
+                } else if ("008".equals(codigoTipo)) {
+                    descripcion = "Transferencia - Crédito";
+                }
+
                 resultado.append(String.format("%-10d %-20s %-12s %-20s %-15.2f %-15s %-15.2f%n",
                         mov.getNumeroMovimiento(),
                         mov.getFechaMovimiento(),
                         mov.getCodigoTipoMovimiento(),
-                        mov.getTipoDescripcion(),
+                        descripcion,
                         mov.getImporteMovimiento(),
                         mov.getCuentaReferencia() != null ? mov.getCuentaReferencia() : "N/A",
                         mov.getSaldo()));
@@ -101,7 +110,7 @@ public class MainController {
             resultado.append(String.format("Total Ingresos: %.2f%n", totalIngresos));
             resultado.append(String.format("Total Egresos (Retiros): %.2f%n", Math.abs(totalEgresos)));
             resultado.append(String.format("Saldo Neto: %.2f%n", totalIngresos + totalEgresos));
-            
+
             // Mostrar saldo actual de la cuenta
             if (cuentaModel != null) {
                 resultado.append(String.format("Saldo Actual de la Cuenta: %.2f%n", cuentaModel.getDecCuenSaldo()));
@@ -200,9 +209,11 @@ public class MainController {
         int left = totalPadding / 2;
         int right = totalPadding - left;
         StringBuilder sb = new StringBuilder(width);
-        for (int i = 0; i < left; i++) sb.append(' ');
+        for (int i = 0; i < left; i++)
+            sb.append(' ');
         sb.append(text);
-        for (int i = 0; i < right; i++) sb.append(' ');
+        for (int i = 0; i < right; i++)
+            sb.append(' ');
         return sb.toString();
     }
 }
